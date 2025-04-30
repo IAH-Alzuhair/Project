@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Personal Project Making a Website as a Beginner</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#tutorials">Tutorials</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#feedback">Feedback</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle">Toggle Light/Dark</button>
+  </header>
+
+  <div class="background-wrapper">
+    <main class="content-wrapper" id="home">
+
+      <!-- Home Page -->
+      <section class="home">
+        <div class="container">
+          <div class="intro">
+            <h1 class="main-title">My IB Personal Project: Making a Website as a Beginner</h1>
+            <h2>My Coding Journey</h2>
+            <p>By: Ibrahim Abdullah Alzuhair</p>
+          </div>
+
+          <div class="goals-container">
+            <div class="goal-box">
+              <h2>Learning Goal</h2>
+              <p>My learning goal is to learn the coding skills required to make a website from scratch, which requires HTML, CSS, and JavaScript knowledge.</p>
+            </div>
+
+            <div class="goal-box">
+              <h2>Product Goal</h2>
+              <p>To program a fully functional website that seeks to teach people with no prior experience the basics of web development, why they should consider it, and how to get started.</p>
+            </div>
+
+            <div class="goal-box">
+              <h2>Why should I consider coding?</h2>
+              <p>Coding isn't just typing lines of code, it's the language of the internet and a key skill in today's tech-driven world. It lets you bring ideas to life without being limited by apps or websites. The rules of coding often boost creativity, pushing you to find clever solutions to problems. Even if you don't become a full-time programmer, knowing the basics gives you an edge in any field and shifts the way you think.</p>
+            </div>
+
+            <div class="goal-box">
+              <h2>How can I start coding?</h2>
+              <p>The good part about coding is that anyone can learn it, anywhere, any time. You can start online via YouTube tutorials, free online courses, or interactive websites. People have different learning styles, so you can experiment as much as you like until you find what clicks with you. To start, there is a section below dedicated to tutorials.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="section-divider" />
+
+      <!-- Beginner Tutorials Section -->
+      <section class="tutorials" id="tutorials">
+        <div class="container">
+          <h2>Web Development Basics</h2>
+          <p>Learn the three core technologies that power the web</p>
+          
+<div class="tutorial-container">
+  <!-- HTML Card -->
+  <div class="tech-card">
+    <div class="tech-card-image">
+      <!-- Reference to image-1 -->
+      <img src="images/image-1.jpg" alt="HTML" class="tech-image">
+    </div>
+    <h4>HTML</h4>
+    <p>HTML (HyperText Markup Language) is the backbone of any website. It defines the structure and content of web pages using a system of tags and attributes. Think of HTML as the skeleton that gives a website its basic form; it creates headings, paragraphs, links, images, and more.</p>
+    <p>With HTML, you can create static web pages that display information in an organized way. It's the first language you should learn when starting web development.</p>
+    <a href="https://www.w3schools.com/html/default.asp" class="learn-more-btn" target="_blank">Learn HTML at W3Schools</a>
+  </div>
+  
+  <!-- CSS Card -->
+  <div class="tech-card">
+    <div class="tech-card-image">
+      <!-- Reference to image-2 -->
+      <img src="images/image-2.jpg" alt="CSS" class="tech-image">
+    </div>
+    <h4>CSS</h4>
+    <p>CSS (Cascading Style Sheets) is what makes websites visually appealing. It controls the presentation, formatting, and layout of HTML elements. With CSS, you can add colors, change fonts, create beautiful layouts, and even add animations.</p>
+    <p>CSS transforms the plain structure of HTML into a visually engaging experience, making it essential for creating modern, responsive websites that look good on all devices.</p>
+    <a href="https://www.w3schools.com/css/default.asp" class="learn-more-btn" target="_blank">Learn CSS at W3Schools</a>
+  </div>
+  
+  <!-- JavaScript Card -->
+  <div class="tech-card">
+    <div class="tech-card-image">
+      <!-- Reference to image-3 -->
+      <img src="images/image-3.jpg" alt="JavaScript" class="tech-image">
+    </div>
+    <h4>JavaScript</h4>
+    <p>JavaScript brings websites to life by adding interactivity and dynamic behavior. It allows websites to respond to user actions, update content in real-time, validate forms, create animations, and much more without requiring page reloads.</p>
+    <p>As the only programming language that runs natively in web browsers, JavaScript is crucial for creating modern web applications that feel responsive and app-like.</p>
+    <a href="https://www.w3schools.com/js/default.asp" class="learn-more-btn" target="_blank">Learn JavaScript at W3Schools</a>
+  </div>
+</div>
+          
+          <h3>Video Tutorials</h3>
+          <div class="video-grid">
+            <div class="tutorial-box">
+              <iframe width="600" height="339" src="https://www.youtube.com/embed/2oCN2q1x3c4" 
+                title="HTML for Beginners" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen></iframe>
+              <p>HTML in 5 Minutes</p>
+            </div>
+
+            <div class="tutorial-box">
+              <iframe width="600" height="339" src="https://www.youtube.com/embed/1PnVor36_40" 
+                title="CSS for Beginners" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen></iframe>
+              <p>CSS for Beginners</p>
+            </div>
+
+            <div class="tutorial-box">
+              <iframe width="600" height="339" src="https://www.youtube.com/embed/Ihy0QziLDf0" 
+                title="Javascript for Beginners" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen></iframe>
+              <p>JavaScript for Beginners</p>
+            </div>
+          </div>
+       </div>
+      </section>
+
+      <hr class="section-divider" />
+
+      <!-- Blog Page -->
+      <section class="blog" id="blog">
+        <div class="container">
+          <h2>My Journey's Milestones</h2>
+          <div class="carousel-container">
+            <div class="carousel" id="blog-posts">
+<div class="carousel-item">
+  <h3>November 11, 2024</h3>
+  <p><strong>Challenge:</strong> I didn't know where to begin or what to focus on first in Python. Everything felt new.</p>
+  <p><strong>Solution:</strong> I picked one topic (Python basics) and followed the order of the W3Schools lessons.</p>
+  <p><strong>Lesson for readers:</strong> Don't overthink the starting point—just start. Use free resources and stay consistent.</p>
+</div>
+
+<div class="carousel-item">
+  <h3>December 4, 2024</h3>
+  <p><strong>Challenge:</strong> I couldn't understand how HTML, CSS, and JS worked together.</p>
+  <p><strong>Solution:</strong> I made small experiments to test changes.</p>
+  <p><strong>Lesson for readers:</strong> Try changing one thing at a time. It helps you see what each part does clearly.</p>
+</div>
+
+<div class="carousel-item">
+  <h3>January 9, 2025</h3>
+  <p><strong>Challenge:</strong> I kept looking at other people's code instead of writing my own.</p>
+  <p><strong>Solution:</strong> I forced myself to build something from a blank file, even if it looked bad.</p>
+  <p><strong>Lesson for readers:</strong> You learn more by doing it yourself. Copying won't help unless you learn something from it and can replicate it.</p>
+</div>
+
+<div class="carousel-item">
+  <h3>February 15, 2025</h3>
+  <p><strong>Challenge:</strong> My layouts were always broken or uneven when using CSS.</p>
+  <p><strong>Solution:</strong> I practiced making page layouts aiming for aesthetics and symmetry.</p>
+  <p><strong>Lesson for readers:</strong> Don't undermine layouts and aesthetics, they can make the finished product feel a lot more rewarding and motivate you to continue further.</p>
+</div>
+
+<div class="carousel-item">
+  <h3>March 27, 2025</h3>
+  <p><strong>Challenge:</strong> I didn't understand how to make elements respond to clicks or user input with JavaScript.</p>
+  <p><strong>Solution:</strong> I started with basic functions like <code>onclick</code> and built small interactive parts step by step.</p>
+  <p><strong>Lesson for readers:</strong> Add interactivity in small steps, don't try to build complex features too soon.</p>
+</div>
+            </div>
+            <!-- Carousel Navigation -->
+            <div class="carousel-navigation">
+              <button class="prev">❮</button>
+              <span id="slide-counter" class="slide-counter">1 / 3</span>
+              <button class="next">❯</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="section-divider" />
+      
+      <!-- Feedback Section -->
+<section class="feedback" id="feedback">
+  <div class="container">
+    <h2>Feedback & Review</h2>
+    <div class="feedback-container">
+      <div class="qr-code-container">
+        <div class="qr-code-placeholder">
+      <img src="qr-image.jpg" alt="JavaScript" class="tech-image">
+          <div class="qr-image"></div>
+        </div>
+        <p class="feedback-desc">Please take the Google Form to give a review and share your thoughts, your feedback is important to us!</p>
+      </div>
+      
+      <!-- New QR code placeholder -->
+      <div class="qr-code-container">
+        <div class="qr-code-placeholder">
+      <img src="images/qr-image.jpg" alt="JavaScript" class="tech-image">
+          <div class="qr-image"></div>
+        </div>
+        <p class="feedback-desc">For a closer look, you can check the website out yourself!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <!-- Admin Section -->
+      <section class="admin-section">
+        <button id="admin-btn" class="admin-btn">Admin Access</button>
+        <div id="admin-modal" class="admin-modal">
+          <h2>Enter Admin Password</h2>
+          <input type="password" id="admin-password" placeholder="Enter Password" />
+          <button id="submit-password" class="submit-password">Submit</button>
+          <button id="exit-admin" class="exit-admin">Exit Admin Mode</button>
+        </div>
+      </section>
+
+      <!-- Add Post Section (initially hidden) -->
+      <section id="add-post-section" class="add-post-section" style="display: none;">
+        <h2>Add New Blog Post</h2>
+        <form id="post-form">
+          <input type="text" id="post-title" placeholder="Post Title" required />
+          <input type="date" id="post-date" required />
+          <textarea id="post-body" placeholder="Write your post content here..." required></textarea>
+          <input type="file" id="post-image" accept="image/*" />
+          <button type="submit" id="add-post-btn">Add Post</button>
+        </form>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>My Coding Journey | KFS Personal Project 2025 | By Ibrahim Abdullah Alzuhair</p>
+      <p>Created with HTML, CSS & JavaScript</p>
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#tutorials">Tutorials</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#feedback">Feedback</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

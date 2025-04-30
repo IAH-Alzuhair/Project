@@ -1,0 +1,690 @@
+/* Root Variables for Theme Colors */
+:root {
+  --box-bg-color: #1a1a1a;
+  --box-hover-color: #2f3136;
+  --text-color: #ffffff;
+  --footer-background-color: #1a1a1a;
+  --footer-text-color: #b9bbbe;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background-color: #121212;
+  background-image: url('images/background.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Main Title Styling */
+.main-title {
+  font-size: 3em;
+  text-align: center;
+  color: #7289da; /* Discord Blue */
+  font-weight: bold;
+}
+
+/* Container for Intro and Goals */
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Section Styling */
+section {
+  padding: 20px 0;
+}
+
+/* Goals Container */
+.goals-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Goal Boxes */
+.goal-box {
+  background-color: var(--box-bg-color);
+  padding: 20px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  color: var(--text-color);
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border: 2px solid transparent;
+}
+
+.goal-box:hover {
+  background-color: var(--box-hover-color);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(114, 137, 218, 0.6);
+}
+
+/* Tutorial Box Styling */
+.tutorial-box {
+  display: inline-block;
+  margin: 10px;
+  text-align: center;
+  width: 30%;
+  max-width: 100%;
+  border: 2px solid transparent;
+}
+
+.tutorial-box iframe {
+  max-width: 100%;
+  border-radius: 10px;
+  z-index: 100;
+}
+
+/* Section Divider */
+.section-divider {
+  border: none;
+  height: 3px;
+  background: linear-gradient(to right, #7289da, #99aab5, #7289da);
+  margin: 40px auto;
+  width: 80%;
+  border-radius: 2px;
+}
+
+/* Header Styling */
+header {
+  background-color: rgba(26, 26, 26, 0.95); /* Slightly transparent dark background */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  transition: background-color 0.3s;
+  backdrop-filter: blur(5px); /* Adds a slight blur effect to the header background */
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+  margin: 10px;
+  padding: 8px 16px;
+  background: none;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(30, 30, 30, 0.95); /* Slightly transparent background */
+  border-radius: 2px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/* Blog Section */
+.blog {
+  padding: 20px;
+}
+
+/* Enhanced Carousel Styling with Transitions */
+.carousel-container {
+  width: 100%;
+  position: relative;
+  margin-top: 20px;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 300px; /* Fixed height for the carousel to prevent layout shifts */
+  margin-bottom: 60px; /* Space for navigation */
+}
+
+.carousel-item {
+  background-color: var(--box-bg-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 40px); /* Account for padding */
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  pointer-events: none;
+  height: calc(100% - 40px); /* Account for padding */
+  overflow-y: auto;
+}
+
+.carousel-item.active {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: all;
+}
+
+.carousel-item h3 {
+  color: #7289da;
+  margin-top: 0;
+}
+
+/* Carousel Navigation */
+.carousel-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  position: absolute;
+  bottom: -50px;
+  width: 100%;
+}
+
+.prev, .next {
+  background-color: #7289da;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.prev:hover, .next:hover {
+  background-color: #5f73a1;
+}
+
+.slide-counter {
+  background-color: rgba(114, 137, 218, 0.2);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--text-color);
+  margin: 0 10px;
+}
+
+/* Delete Button */
+.delete-btn {
+  background-color: transparent;
+  color: #d92944;
+  border: none;
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 18px;
+  transition: transform 0.3s;
+}
+
+.delete-btn:hover {
+  transform: scale(1.2);
+}
+
+/* Admin Modal Styling */
+.admin-modal {
+  display: none;
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: var(--text-color);
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border: 2px solid #7289da;
+}
+
+#admin-password {
+  padding: 10px;
+  width: 80%;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+#submit-password, #exit-admin {
+  background-color: #7289da;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#submit-password:hover, #exit-admin:hover {
+  background-color: #5f73a1;
+}
+
+#admin-btn {
+  background-color: #7289da;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+#admin-btn:hover {
+  background-color: #5f73a1;
+}
+
+/* Add Post Section Styling */
+.add-post-section {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: var(--box-bg-color);
+  border-radius: 10px;
+}
+
+#post-form input, #post-form textarea {
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #444;
+  background-color: #333;
+  color: white;
+  box-sizing: border-box;
+}
+
+textarea {
+  min-height: 150px;
+  resize: vertical;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 14px;
+}
+
+#add-post-btn {
+  background-color: #7289da;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#add-post-btn:hover {
+  background-color: #5f73a1;
+}
+
+/* Tutorial section styling */
+.tutorials {
+  text-align: center;
+  padding: 30px 0;
+  align-items: center;
+}
+
+.tutorials-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.tutorial-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.tech-card {
+  background-color: var(--box-bg-color);
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.tech-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.tech-card h4 {
+  color: #7289da;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+.tech-card p {
+  flex-grow: 1;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.learn-more-btn {
+  background-color: #7289da;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.learn-more-btn:hover {
+  background-color: #5f73a1;
+}
+
+/* Video Grid for Tutorials */
+.video-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Feedback Section Styling */
+.feedback {
+  padding: 40px 0;
+}
+
+.feedback-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.qr-code-container {
+  text-align: center;
+  width: 300px;
+}
+
+.qr-code-placeholder {
+  margin: 0 auto;
+  width: 220px;
+  height: 220px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+
+.qr-code {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Fallback for missing QR images */
+.qr-code:not([src]), .qr-code[src=""] {
+  position: relative;
+  background-color: #f0f0f0;
+}
+
+.qr-code:not([src])::after, .qr-code[src=""]::after {
+  content: "QR Code";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #333;
+  font-weight: bold;
+}
+
+.feedback-desc {
+  font-size: 16px;
+  margin-top: 10px;
+  color: var(--text-color);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .feedback-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Footer Styling */
+footer {
+  background-color: rgba(26, 26, 26, 0.95);
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+  padding: 30px 20px;
+  color: var(--footer-text-color);
+  text-align: center;
+  backdrop-filter: blur(5px);
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 20px 0 0 0;
+  gap: 30px;
+}
+
+.footer-nav ul li a {
+  color: var(--footer-text-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.footer-nav ul li a:hover {
+  color: #7289da;
+  text-decoration: underline;
+}
+
+/* Light Theme Styles */
+body.light-theme {
+  background-color: #f5f5f5;
+  /* Keep the background image in light theme too */
+  background-image: url('images/background.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  color: #333333;
+  --box-bg-color: #ffffff;
+  --box-hover-color: #f0f0f0;
+  --text-color: #333333;
+  --footer-background-color: #ffffff;
+  --footer-text-color: #555555;
+}
+
+body.light-theme header, 
+body.light-theme footer {
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px); /* Adds a slight blur effect to the header background */
+}
+
+body.light-theme nav ul li a,
+body.light-theme .footer-nav ul li a {
+  color: #333333;
+}
+
+body.light-theme .footer-nav ul li a:hover {
+  color: #7289da;
+}
+
+body.light-theme #theme-toggle {
+  border-color: #333333;
+  color: #333333;
+}
+
+body.light-theme .content-wrapper {
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .goal-box,
+body.light-theme .carousel-item,
+body.light-theme .admin-modal,
+body.light-theme .add-post-section,
+body.light-theme .tech-card {
+  background-color: #f0f0f0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme #post-form input,
+body.light-theme #post-form textarea {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  color: #333;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .goals-container,
+  .tutorial-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .tutorial-box {
+    width: 100%;
+  }
+  
+  .tutorial-box iframe {
+    height: 250px;
+  }
+  
+  .container {
+    width: 95%;
+  }
+  
+  .carousel {
+    height: 400px; /* Adjust height for mobile */
+  }
+  
+  .footer-nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .video-grid {
+    flex-direction: column;
+  }
+  
+  .tutorial-box {
+    width: 100%;
+  }
+
+}
+
+.tech-card {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 20px 0;
+  overflow: hidden;
+  background-color: var(--box-bg-color);
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  height: 100%;
+}
+
+.tech-card-image {
+  width: 100%;
+  height: 180px;
+  background-color: #2a2a2a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+}
+
+.tech-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This ensures the image covers the area properly */
+  transition: transform 0.3s ease;
+}
+
+/* Image hover effect */
+.tech-card:hover .tech-image {
+  transform: scale(1.05);
+}
+
+/* Fallback for missing images */
+.tech-image:not([src]), .tech-image[src=""] {
+  position: relative;
+  background-color: #f0f0f0;
+}
+
+.tech-image:not([src])::after, .tech-image[src=""]::after {
+  content: "Image Not Found";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #333;
+  font-size: 14px;
+  text-align: center;
+}
+
+.tech-card h4, .tech-card p, .tech-card a {
+  padding: 0 20px;
+}
+
+/* Light Theme Adjustments */
+body.light-theme .tech-card-image {
+  background-color: #e0e0e0;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .tech-card-image {
+    height: 150px;
+  }
+}
